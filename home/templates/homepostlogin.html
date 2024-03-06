@@ -1,0 +1,249 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="/media/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                            <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
+                            <a href="booking_app/make_payment" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="/media/img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
+                            <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
+                            <a href="booking_app/make_payment" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="/media/img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
+                        <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
+                        <p>At MR Travels, we believe that travel is more than just visiting new places; it's about creating lasting memories, forging connections with different cultures, and embarking on journeys that transform your life. Our passion for travel has driven us to create a platform that inspires, informs, and facilitates unforgettable travel experiences.</p>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <img class="img-fluid" src="/media/img/about-1.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src="/media/img/about-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <a href="booking_app/make_payment" class="btn btn-primary mt-1">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid pb-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-money-check-alt text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Competitive Pricing</h5>
+                            <p class="m-0">We're committed to offering competitive pricing without compromising on the quality of your travel experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-award text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Best Services</h5>
+                            <p class="m-0">We provide you with the best services to ensure your travel experience is seamless, enjoyable, and memorable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-globe text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Worldwide Coverage</h5>
+                            <p class="m-0">We get that the world is a vast and diverse place, and so your travel ambitions should know no bounds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>
+                <h1>Our Travel Guides</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="/media/img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Luna</h5>
+                            <p class="m-0">Certified Tour Guide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="/media/img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Ezra</h5>
+                            <p class="m-0">Travel and Tourism Professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="/media/img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Eloise</h5>
+                            <p class="m-0">Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="/media/img/team-4.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Kai</h5>
+                            <p class="m-0">Interpretive Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
+                <h1>What Say Our Clients</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="text-center pb-4">
+                    <img class="img-fluid mx-auto" src="/media/img/testimonial-1.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">"I can't imagine traveling without this virtual travel companion! It has made my trips so much smoother and more enjoyable. The real-time guidance and personalized recommendations have been a game-changer."
+                        </p>
+                        <h5 class="text-truncate">Christain Harper</h5>
+                        <span>CEO of Cyber Security Firm</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="/media/img/testimonial-2.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">"This website is like having a knowledgeable friend with me wherever I go. It's helped me discover hidden gems, navigate unfamiliar cities, and plan unforgettable adventures."
+                        </p>
+                        <h5 class="text-truncate">Ava Chen</h5>
+                        <span>Professional Photographer</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="/media/img/testimonial-3.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">"I've always been a solo traveler, but with this virtual travel companion, I never feel alone. It keeps me company, provides valuable tips, and ensures my trips are filled with incredible memories."
+                        </p>
+                        <h5 class="text-truncate">Rhys Larsen</h5>
+                        <span>Bodyguard</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid mx-auto" src="/media/img/testimonial-4.jpg" style="width: 100px; height: 100px;" >
+                    <div class="testimonial-text bg-white p-4 mt-n5">
+                        <p class="mt-5">"I've used several travel apps, but this one stands out. It doesn't just show me where to go; it tells me why I should go there. The cultural insights and local tips have enriched my travel experiences."
+                        </p>
+                        <h5 class="text-truncate">Josh Chen</h5>
+                        <span>Surgeon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+    </div>
+    <!-- Blog End -->
+
+    {% endblock a %}

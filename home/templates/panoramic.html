@@ -1,0 +1,70 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Model Viewer</title>
+
+    <style>
+        model-viewer{
+            height: 500px;
+            width: 100%;
+        }    
+    </style>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+</head>
+<body>
+    {% for place in places %}
+    <!-- Blog Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-20">
+                <!-- Blog Detail Start -->
+                <div class="pb-3">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <model-viewer alt="car" src="/media/{{place.img3d}}" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+                            <div class="blog-date">
+                                <h6 class="font-weight-bold mb-n1">3D</h6>
+                                <small class="text-white text-uppercase">View</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white mb-3" style="padding: 30px;">
+                        <div class="d-flex mb-3">
+                            <a class="text-primary text-uppercase text-decoration-none" href="/destinations">Places</a>
+                            <span class="text-primary px-2">|</span>
+                            <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
+                        </div>
+                        <h2 class="mb-3">{{place.country}}</h2>
+                        <p>{{place.desc}}</p>
+                        <h4 class="mb-3">Customs & Traditions</h4>
+                        <img class="img-fluid w-50 float-left mr-4 mb-2" src="/media/{{place.img1}}">
+                        <p>{{place.cust_trad | linebreaks}}</p>
+                        <h4 class="mb-3">Language & Culture</h4>
+                        <img class="img-fluid w-50 float-right ml-4 mb-2" src="/media/{{place.img2}}">
+                        <p>{{place.lang_culture | linebreaks}}</p>
+                        <h4 class="mb-3">Famous Spots</h4>
+                        <p>{{place.famous_spots | linebreaks}}</p>
+                        <h4 class="mb-3">Travel Tips & Recommendations</h4>
+                        <p>{{place.tips_recom | linebreaks}}</p>
+                    </div>
+                </div>
+            </div>
+
+   <!-- <h3 style="margin-left: 20px">{{place.country}} </h3>
+    <div class="container">
+    <p>{{place.cust_trad | linebreaks}} </p>
+   
+    </div>-->
+    {% endfor %}
+</body>
+</html>
+
+{% endblock a %}

@@ -1,0 +1,52 @@
+{% extends 'masterPage.html' %}
+
+{% block a %}
+
+<style>
+    body {
+      background-image: url('/media/img/contactbg3.png');
+    }
+    </style>
+
+<div class="container-fluid py-5">
+  <div class="container py-3">
+      <div class="text-center mb-3 pb-3">
+          <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contact</h6>
+          <h1>Contact For Any Query</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="contact-form bg-white" style="padding: 30px;">
+                <div id="success"></div>
+                <form method="post">
+                  {% csrf_token %}
+                    <div class="form-row">
+                      <div class="control-group col-sm-6">
+                        <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                            required="required" data-validation-required-message="Please enter your name" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                        <div class="control-group col-sm-6">
+                            <input type="email" name="email" class="form-control p-4" id="exampleInputEmail1" placeholder="Your Email"
+                                required="required" data-validation-required-message="Please enter your email" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <p id="emailHelp" class="form-text text-center"><small>We'll never share your email with anyone else.</small></p>
+                    <div class="control-group">
+                        <textarea class="form-control py-3 px-4" rows="5" name="desc" id="exampleInputPassword1" placeholder="Message"
+                            required="required"
+                            data-validation-required-message="Please enter your message"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock a %}

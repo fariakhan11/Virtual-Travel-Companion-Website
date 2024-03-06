@@ -1,0 +1,60 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+
+<!-- Header Start -->
+<div class="container-fluid page-header">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <h3 class="display-4 text-white text-uppercase">Services</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0 text-uppercase"><a class="text-white" href="/homepostlogins">Home</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">Services</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Service Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
+            <h1>Tours & Travel Services</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/dwitter/dashboard">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                    <h5 class="mb-2">Social Sharing and Interactions</h5>
+                    <p class="m-0">Taking socializing to the next level, where connections thrive and conversations flourish.</p>
+                </div>
+            </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/booking_app/make_payment">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
+                    <h5 class="mb-2">Ticket Booking</h5>
+                    <p class="m-0">Life is short, and the world is wide. Your one-stop destination to book tickets effortlessly and enjoy unforgettable experiences.</p>
+                </div>
+            </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <a href="/quiz/play">
+                <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                    <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
+                    <h5 class="mb-2">Quizzes</h5>
+                    <p class="m-0">Are you ready to embark on a thrilling journey through the realms of facts and trivia, where only the sharpest minds survive?</p>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+{% endblock a %}

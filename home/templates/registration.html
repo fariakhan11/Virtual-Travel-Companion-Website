@@ -1,0 +1,54 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+
+<style>
+    body {
+      background-image: url('/media/img/loginbg2.png');
+    }
+    </style>
+
+<div class="container mt-5 mb-5 col-9">
+    <div class="text-center mb-3 pb-3">
+        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Register</h6>
+        <h1>Register Yourself</h1>
+    </div>
+    <form class="col-6 mx-auto card p-3 shadow-lg" method="POST" enctype="multipart/form-data">
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}  alert-dismissible fade show my-0" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="fname" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="lname" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email ID</label>
+            <input type="Email" class="form-control" id="exampleInputEmail1" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputEmail1" name="passwd" required>
+        </div>
+
+        <p>Already Have Account <a href="/login">Login</a></p>
+        <button type="submit" class="btn btn-success mx-5 px-2">Register</button>
+    </form>
+</div>
+
+{% endblock a %}
