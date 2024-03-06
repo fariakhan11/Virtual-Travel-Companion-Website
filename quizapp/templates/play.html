@@ -1,0 +1,101 @@
+{% extends "masterPage.html" %}
+
+{% block a %}
+
+<style>
+    body {
+      background-image: url('/media/img/quizbg2.png');
+    }
+    </style>
+            <div id="app">
+                <div class="container mt-3">
+                    <div class="col-md-7 mx-auto">
+                            <div class="text-center mt-5 mb-3 pb-3">
+                                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Quizzes</h6>
+                                <h1>Get Ready To Test Your Travel Knowledge</h1>
+                            </div>
+
+                            <!--<form class="col-lg-10 mx-auto card shadow-lg">-->
+                            <div v-for="question in questions">
+                                <hr>
+                                <p style="font-weight:600">[[question.question]]</p>
+                                <div class="pl-3" v-for="answer in question.answers">
+                                    <input class="form-check-input" @change="checkAnswer($event, question.uid)" :value="answer.answer"
+                                        type="radio" :name="question.uid" :id="question.uid" />
+                                    <label class="form-check-label" >
+                                        [[answer.answer]]
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                            <button @click="submitQuiz" class="btn btn-primary px-4">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<h3 id="displaybox" class="container text-primary text-center mt-3"></h3>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data() {
+            return {
+                category: '{{category}}',
+                questions: [],
+                totalScore: 0,
+            };
+        },
+        methods: {
+            getQuestions() {
+                var _this = this
+                fetch(`/quiz/api/get-quiz/?category=${this.category}`)
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result)
+                        _this.questions = result.data
+                    })
+            },
+            checkAnswer(event, uid) {
+                this.questions.map(question => {
+                    score = 0
+                    console.log(question.answers)
+                    answers = question.answers
+                    for (var i = 0; i < answers.length; i++) {
+                        if (answers[i].answer == event.target.value) {
+                            if (answers[i].is_correct) {
+                                score = score + 1
+                                this.totalScore += 1;
+                                // alert("Your answer is correct...")
+                            }
+                            else {
+                                // alert("Sorry, your answer is incorrect...")
+                            }
+                        }
+                    }
+                })
+                console.log(event.target.value, uid)
+            },
+            submitQuiz() {
+                let dp = document.getElementById("displaybox")
+                // Display the total score when the submit button is clicked
+                //alert(`Your Total Score: ${this.totalScore}`);
+                dp.innerHTML = `Your Total Score: ${this.totalScore}`;
+            },
+
+        },
+        created() { // Life-cyccle Method
+            this.getQuestions()
+            console.log('Page Loaded....')
+        }
+    });
+
+    // app.mount('#app');
+
+</script>
+{% endblock a %}
